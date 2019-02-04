@@ -1,0 +1,2 @@
+Zerotier;https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip
+JDownloader;https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip
