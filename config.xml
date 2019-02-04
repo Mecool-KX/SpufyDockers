@@ -3,7 +3,7 @@
     <docker nombre="Zerotier">
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
     </docker>
-    <docker name="JDdownloader">
+    <docker nombre="JDdownloader">
         <link>https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip</link>
     </docker>
 </data>
