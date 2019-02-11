@@ -4,6 +4,10 @@
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
         <ssh>instalar.sh</ssh>
     </docker>
+    <docker nombre="rclone">
+        <link>https://archive.org/download/SpufyDockers/rclone_light8.0-armhf.zip</link>
+        <ssh>rclone_light.sh</ssh>
+    </docker>
     <docker nombre="JDdownloader">
         <link>https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip</link>
         <ssh>jdownloader.sh</ssh>
