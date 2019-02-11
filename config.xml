@@ -8,4 +8,12 @@
         <link>https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip</link>
         <ssh>jdownloader.sh</ssh>
     </docker>
+    <docker nombre="PiHole">
+        <link>https://archive.org/download/SpufyDockers/pihole.zip</link>
+        <ssh>instalar.sh</ssh>
+    </docker>
+    <docker nombre="Emby">
+        <link>https://archive.org/download/SpufyDockers/emby_armhf.zip</link>
+        <ssh>emby_armhf.sh</ssh>
+    </docker>
 </data>
