@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <data>
     <docker nombre="Zerotier">
-        <enable>0</enable>
+        <enable>SI</enable>
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
         <ssh>instalar.sh</ssh>
         <desc>Para conectarte a la red de tu casa desde fuera de ella</desc>
