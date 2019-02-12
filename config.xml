@@ -1,26 +1,31 @@
 <?xml version="1.0"?>
 <data>
     <docker nombre="Zerotier">
+        <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
         <ssh>instalar.sh</ssh>
         <desc>Para conectarte a la red de tu casa desde el exterior de ella</desc>
     </docker>
     <docker nombre="rclone">
+        <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/rclone_light8.0-armhf.zip</link>
         <ssh>rclone_light.sh</ssh>
         <desc>Para tener acceso a tu cuenta de Google Drive</desc>        
     </docker>
     <docker nombre="JDdownloader">
+        <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip</link>
         <ssh>jdownloader.sh</ssh>
         <desc>Para descargar desde diferentes sitios de descarga directa</desc>        
     </docker>
     <docker nombre="PiHole">
+        <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/pihole.zip</link>
         <ssh>instalar.sh</ssh>
-        <desc>Para bloquear páginas de publicidad, minado, etc en todos los ordenadores de tu casa</desc>        
+        <desc>Servidor DNS para bloqueo de publicidad</desc>        
     </docker>
     <docker nombre="Emby">
+        <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/emby_armhf.zip</link>
         <ssh>emby_armhf.sh</ssh>
         <desc>Servidor de medios. Similar a Plex</desc>        
