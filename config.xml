@@ -4,7 +4,7 @@
         <enable>True</enable>
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
         <ssh>instalar.sh</ssh>
-        <desc>Para conectarte a la red de tu casa desde el exterior de ella</desc>
+        <desc>Para conectarte a la red de tu casa desde fuera de ella</desc>
     </docker>
     <docker nombre="rclone">
         <enable>True</enable>
