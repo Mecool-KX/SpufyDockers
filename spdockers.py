@@ -29,7 +29,6 @@ class bcolors:
 FILE_CONFIGURACION="https://raw.githubusercontent.com/Mecool-KX/SpufyDockers/master/config.xml"
 NOMBRE_CFG="config.txt"
 CARPETA_DESCARGA="/tmp/"
-CARPETA_DOCKER="/storage/.kodi/addons/service.system.docker/"
 CARPETA_SCRIPTS="/storage/.config/scripts/dockers/"
 
 SI = ['1', 'true', 's', 'y', 'si', 'yes']
@@ -39,8 +38,6 @@ dockers=""
 def main():  
 	sys.tracebacklimit = 0
 	opcion=1 # para que entre al menu
-
-	if existe_ejecutable("oscam2"):pause()
 
 	#Chequeamos SO
 	check_SO()
