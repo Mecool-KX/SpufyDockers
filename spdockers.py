@@ -62,6 +62,8 @@ def main():
 	
 	os.system('clear')
 	
+	sys.exit(0)
+	
 def descarga_fichero(url, fichero):
 	"""
 		Función para descargar un fichero donde nos digan
@@ -334,9 +336,11 @@ def mostrar_error(mensaje):
 
 	#os.system('clear')
 	
-	print bcolors.FAIL + mensaje + bcolors.ENDC
+	print bcolors.FAIL + mensaje + bcolors.ENDC + "\n"
 	
-	sys.exit()
+	pause()
+	
+	sys.exit(1)
 
 def check_SO():
 	"""
