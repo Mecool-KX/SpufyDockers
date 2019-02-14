@@ -51,8 +51,6 @@ def main():
 	# Leemos la configuración de dockers a instalar
 	descarga_lee_XML()
 
-#	descomprime_zip("/tmp/rclone.zip", "/storage/.config/scripts/dockers/rclone/")
-
 	while opcion:
 		# Lanzamos el menú para elegir opción
 		opcion=lanza_menu()
@@ -253,7 +251,7 @@ def print_menu():       ## Your menu design here
 
 	cabecera()
 	for x, child in enumerate(dockers): # files are iterable
-		print "\t" + bcolors.OKGREEN + str(x+1) + ". " + ("Descargar y ejecutar " if not docker_descargado(child.get('nombre')) else "Ejecutar ") + child.get('nombre') + bcolors.ENDC + "\n\t   (" + (dockers[x].find('desc').text).encode('utf-8') + ")"
+		print "\t" + bcolors.OKGREEN + str(x+1) + ". " + ("Descargar y ejecutar " if not docker_descargado(child.get('nombre')) else "Ejecutar ") + child.get('nombre') + bcolors.ENDC + "\n\t   (" + (dockers[x].find('desc').text).encode('utf-8') + ")\n"
 	print
 	if os.path.exists(CARPETA_SCRIPTS): print "\t" + bcolors.OKGREEN + str(len(dockers)+1) + ". " + "Borrar TODOS los dockers\n"
 	print "\t" + bcolors.OKGREEN + "0. Salir\n" + bcolors.ENDC
