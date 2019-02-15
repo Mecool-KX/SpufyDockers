@@ -30,12 +30,13 @@ FILE_CONFIGURACION="https://raw.githubusercontent.com/Mecool-KX/SpufyDockers/mas
 NOMBRE_CFG="config.txt"
 CARPETA_DESCARGA="/tmp/"
 CARPETA_SCRIPTS="/storage/.config/scripts/dockers/"
+TIEMPO_MINIMO=3 # Tiempo mínimo en un script para no pedir una pausa
 
 SI = ['1', 'true', 's', 'y', 'si', 'yes']
 
 dockers=""
 
-def main():  
+def main(argv):  
 	sys.tracebacklimit = 0
 	opcion=1 # para que entre al menu
 
@@ -46,7 +47,7 @@ def main():
 	comprueba_internet()
 
 	# Comprobamos si está instalado docker
-	check_docker()
+	if argv[0] != "-NOCHECK": check_docker()
 
 	# Leemos la configuración de dockers a instalar
 	descarga_lee_XML()
@@ -119,9 +120,26 @@ def instala_ejecuta(opcion):
 			# Damos los permisos de ejecución a los ficheros .sh del docker
 			ficheros_permisos(ficheros_pattern(CARPETA_SCRIPTS + dockers[opcion-1].get('nombre') + "/", "*.sh"))
 
+		# Mostramos la información disponible del docker antes 
+		try: # Para que no de error si el campo info está vacío
+			mostrar_informacion("" if (dockers[opcion-1].find('info').text).encode('utf-8') is None else (dockers[opcion-1].find('info').text).encode('utf-8'))
+		except:
+			pass
+
 		# Ya está descargado. Tenemos que ejecutarlo
 		mostrar_mensaje ("Ejecutamos el docker", bcolors.OKGREEN)
+		
+		start_time=time.time()
 		lanza_sh(CARPETA_SCRIPTS + dockers[opcion-1].get('nombre'), dockers[opcion-1].find('ssh').text)
+		if (time.time() - start_time) <= TIEMPO_MINIMO: pause()
+
+def mostrar_informacion(info):
+	
+	if info != "":
+		cabecera()
+		mostrar_mensaje("\n ¡¡¡ INFORMACIÓN IMPORTANTE !!!\n", bcolors.FAIL)
+		mostrar_mensaje("\t" + info, bcolors.OKGREEN)
+		pause(" ")
 
 def borrar_dockers():
 	"""
@@ -336,8 +354,6 @@ def mostrar_error(mensaje):
 	
 	print bcolors.FAIL + mensaje + bcolors.ENDC + "\n"
 	
-	pause()
-	
 	sys.exit(1)
 
 def check_SO():
@@ -377,4 +393,4 @@ def lanza_sh(carpeta, ssh, arg=None):
 
 # this runs when the script is called from the command line
 if __name__ == '__main__':  
-    main()
+    main(sys.argv[1:])
