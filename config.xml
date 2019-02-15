@@ -5,7 +5,7 @@
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
         <ssh>instalar.sh</ssh>
         <desc>Para conectarte a la red de tu casa desde fuera de ella</desc>
-        <info>Consultar la configuración de Zerotier en https://goo.gl/x1QEtw</info>
+        <info></info>
     </docker>
     <docker nombre="rclone">
         <enable>1</enable>
