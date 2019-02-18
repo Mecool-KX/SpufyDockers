@@ -14,7 +14,7 @@
         <tipo>zip</tipo>
         <ssh>rclone_light.sh</ssh>
         <desc>Para tener acceso a tu cuenta de Google Drive</desc>        
-        <info>Consultar información del docker en https://goo.gl/mSt8Up</info>
+        <info>Consultar información del docker en https://goo.gl/mSt8Up y en ..scripts/dockers/rclone/  [lee.me y Configuracion rclone.pdf]</info>
     </docker>
     <docker nombre="JDdownloader">
         <enable>1</enable>
