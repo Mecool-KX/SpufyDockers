@@ -3,7 +3,6 @@
     <docker nombre="Zerotier">
         <enable>SI</enable>
         <link>https://archive.org/download/SpufyDockers/zerotier1.2.12_armhf.zip</link>
-        <tipo>zip</tipo>
         <ssh>instalar.sh</ssh>
         <desc>Para conectarte a la red de tu casa desde fuera de ella</desc>
         <info>Consultar la configuración de Zerotier en https://goo.gl/x1QEtw</info>
@@ -11,7 +10,6 @@
     <docker nombre="rclone">
         <enable>1</enable>
         <link>https://archive.org/download/SpufyDockers/rclone_light8.5-armhf.zip</link>
-        <tipo>zip</tipo>
         <ssh>rclone_light.sh</ssh>
         <desc>Para tener acceso a tu cuenta de Google Drive</desc>        
         <info>Consultar información del docker en https://goo.gl/mSt8Up y en ..scripts/dockers/rclone/  [lee.me y Configuracion rclone.pdf]</info>
@@ -19,7 +17,6 @@
     <docker nombre="JDdownloader">
         <enable>1</enable>
         <link>https://archive.org/download/SpufyDockers/jdownloader2.0_armhf.zip</link>
-        <tipo>zip</tipo>
         <ssh>jdownloader.sh</ssh>
         <desc>Para descargar desde diferentes sitios de descarga directa</desc>        
         <info>Cuando se para, tienes que meter credenciales en la interfaz web y reiniciar jdownloader</info>
@@ -27,7 +24,6 @@
     <docker nombre="PiHole">
         <enable>1</enable>
         <link>https://archive.org/download/SpufyDockers/pihole.zip</link>
-        <tipo>zip</tipo>
         <ssh>instalar.sh</ssh>
         <desc>Servidor DNS para bloqueo de publicidad</desc>        
         <info>Consultar la información del fichero ..scripts/dockers/PiHole/pi-hole.pdf</info>
@@ -35,7 +31,6 @@
     <docker nombre="Emby">
         <enable>1</enable>
         <link>https://archive.org/download/SpufyDockers/emby_armhf.zip</link>
-        <tipo>bash</tipo>
         <ssh>emby_armhf.sh</ssh>
         <desc>Servidor de medios. Similar a Plex</desc>        
         <info>Al instalar el directorio multimedia, la direccion de instalacion de donde se encuentra la carpeta debe ser:
