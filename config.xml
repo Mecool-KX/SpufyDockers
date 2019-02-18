@@ -10,7 +10,7 @@
     </docker>
     <docker nombre="rclone">
         <enable>1</enable>
-        <link>https://archive.org/download/SpufyDockers/rclone_light8.0-armhf.zip</link>
+        <link>https://archive.org/download/SpufyDockers/rclone_light8.5-armhf.zip</link>
         <tipo>zip</tipo>
         <ssh>rclone_light.sh</ssh>
         <desc>Para tener acceso a tu cuenta de Google Drive</desc>        
